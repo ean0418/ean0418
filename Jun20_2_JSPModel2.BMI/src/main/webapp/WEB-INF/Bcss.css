@@ -1,0 +1,11 @@
+@charset "UTF-8";
+#joinTbl {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: pink;
+	font-family: "AWide";
+	font-size: 15pt;
+	border-radius: 8px;
+	box-shadow : purple 5px 5px 10px;
+	
+}

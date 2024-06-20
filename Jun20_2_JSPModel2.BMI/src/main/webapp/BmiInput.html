@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="EanValidChecker.js"></script>
+<script type="text/javascript" src="M2.js"></script>
+<link rel="stylesheet" href="V3.css">
+
+</head>
+<body>
+
+	<h1>BmiInput</h1>
+	
+	<form action= "HomeController" enctype="multipart/form-data" method ="post" name = "p" onsubmit="return bmiCheck();">
+	<table>
+	 		<tr>
+	 			<td>
+	 				이름<input name = "name"> <p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+	 				키 (cm)<input name = "height"> <p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+	 				몸무게 (kg)<input name = "weight"> <p>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+	 				사진<input type="file" name ="photo"> <p>
+	 			</td>
+	 		</tr>
+	 	</table>
+	 	<hr>
+	 	<button>출력</button>
+	 </form>
+
+</body>
+</html>
