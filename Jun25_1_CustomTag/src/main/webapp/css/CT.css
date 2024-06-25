@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "AWide";
+	src :url("AWide.ttf");
+}
+
+body {
+	background-image: url("abc.jpg");
+	background-position: center;
+	width : 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#nbTbl {
+	margin-left: auto;
+	margin-right: auto;
+	width : 500px;
+	font-family: "AWide";
+	color : black;
+}
+
+#idSite {
+	margin-right: auto;
+	font-family: "AWide";
+	color : orange;
+	margin-left: auto;
+	width : 500px;
+	font-size: 30pt;
+	}
+#idTitle {
+	margin-right: auto;
+	font-family: "AWide";
+	color : blue;
+	margin-left: auto;
+	width : 500px;
+	font-size: 40pt;
+	}
