@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family : "AWide";
+	src: url("Awide.ttf")
+}
+
+body {
+	background-color: teal;
+	padding : 0px;
+	margin: 0px;
+}
+
+#regTbl {
+	position : fixed;
+	top : -2px;
+	width: 100%;
+	background-color: green;
+}
+
+
+
+#reg {
+	font-family: "AWide";
+	color: lightblue;
+	font-size: 40pt;
+	font-weight: 900;
+	text-decoration: none;
+	background-color: pink;
+}
