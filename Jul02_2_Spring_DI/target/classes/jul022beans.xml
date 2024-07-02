@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id = "d" class="com.ean.jul022.dog.Dog"></bean>
+
+	<bean id="d2" class="com.ean.jul022.dog.Dog">
+		<property name="name" value="개님"></property>
+		<property name="age" value="99"></property>
+	</bean>
+	
+	<bean id="d3" class="com.ean.jul022.dog.Dog">
+		<constructor-arg value="개느님"></constructor-arg>
+		<constructor-arg value="999"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="b" class="com.ean.jul022.book.Book">
+		<property name="name" value="책"></property>
+		<property name="price" value="90000"></property>
+	</bean>
+	<bean id="b2" class="com.ean.jul022.book.Book">
+		<property name="name" value="책님"></property>
+		<property name="price" value="199999"></property>
+	</bean>
+	<bean id="b3" class="com.ean.jul022.book.Book">
+		<property name="name" value="책느님"></property>
+		<property name="price" value="267899"></property>
+	</bean>
+</beans>
