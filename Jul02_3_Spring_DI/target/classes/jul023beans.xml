@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+	
+
+	
+	<bean id="h1" class="com.ean.jul023.human.Human">
+		<property name="name" value="황이안"></property>
+		<property name="age" value="26"></property>
+		
+		<property name="nickname">
+			<list value-type="java.lang.String">
+				<value>이안</value>
+				<value>존잘</value>
+				<value>존예</value>
+			</list>
+		</property>
+		
+		<property name="friend">
+			<list value-type="java.lang.String">
+				<value>김세훈</value>
+				<value>정다운</value>
+				<value>이영훈</value>
+			</list>
+		</property>
+		
+		<property name="family">
+			<map key-type="java.lang.String" value-type="java.lang.Integer">
+				<entry key="아버지" value="53"></entry>
+				<entry key="어머니" value="49"></entry>
+			</map>
+		</property>
+		<property name="pet" ref="d1"></property>	
+	</bean>
+	<bean id="d1" class="com.ean.jul023.dog.Dog">
+		<constructor-arg value="멈무"></constructor-arg>
+		<constructor-arg value="5800"></constructor-arg>
+	</bean>
+	
+	<bean id="c1" class="com.ean.jul023.cat.Cat">
+		<property name="name" value="야옹"></property>
+		<property name="age" value="20000"></property>
+	</bean>
+	
+	<!-- 어딘가에 bean을 등록해놓으면 @Autowired를 해석해서 가져다쓰겠다는 의미 -->
+	<context:annotation-config></context:annotation-config>
+</beans>
