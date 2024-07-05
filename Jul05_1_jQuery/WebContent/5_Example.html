@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// ㅋㅋㅋㅋㅋ : 글자색 - green / 배경색 : red
+		// ㅎㅎㅎㅎㅎ : 글자색 - yellow / 배경색 : blue
+		// ㅠㅠㅠㅠㅠ : 글자색 - pink / 배경색 : teal
+	
+		let arrobj = [
+			{
+				color: "green",
+				bc : "red"
+			},
+			{
+				color: "yellow",
+				bc :"blue"
+			},
+			{
+				color: "pink",
+				bc : "teal"
+			},
+		];
+		 
+		
+	$("td").each(function(i,t) {
+		$(t).css("color", arrobj[i].color);
+		$(t).css("background-color", arrobj[i].bc);
+	
+		});
+	
+	// setInterval()을 이용해서
+	// 처음시작사진 ~ 끝사진 까지 한장씩 넘어가면서 보여주기
+	// 마지막사진을 출력하면 => 다시 처음부터 보여주기
+	let i = 0;
+
+		setInterval(() => {
+			i++;
+			if (i == 9) {
+				i = 1;
+			}
+			$("img").attr("src", "s" + i + ".JPG");
+		},1000);
+		
+	});
+</script>
+</head>
+<body>
+	<img>
+	<hr>
+	<table>
+		<tr>
+			<td>ㅋㅋㅋㅋ</td>
+		</tr>
+		<tr>
+			<td>저 마음에</td>
+		</tr>
+		<tr>
+			<td>안드시죠?</td>
+		</tr>
+	</table>
+</body>
+</html>
