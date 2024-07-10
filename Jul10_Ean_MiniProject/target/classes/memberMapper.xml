@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ean.jul103.member.MemberMapper">
+	<insert id="signupMember" parameterType="com.ean.jul103.member.Member">
+		insert into moviesite_member values(#{ms_id}, #{ms_pw}, #{ms_name}, #{ms_fav_movie}, #{ms_addr}, #{ms_photo})
+	</insert>
+	<select id="getMemberById" parameterType="com.ean.jul103.member.Member" resultType="com.ean.jul103.member.Member">
+		select * from moviesite_member where ms_id = #{ms_id}
+	</select>
+	<delete id="deleteMember" parameterType="com.ean.jul103.member.Member">
+		delete from moviesite_member where ms_id = #{ms_id}
+	</delete>
+	<update id="updateMember" parameterType="com.ean.jul103.member.Member">
+		update moviesite_member set ms_pw = #{ms_pw}, ms_name = #{ms_name}, ms_fav_movie = #{ms_fav_movie}, ms_addr = #{ms_addr}, ms_photo = #{ms_photo} where ms_id = #{ms_id}
+	</update>
+</mapper>
