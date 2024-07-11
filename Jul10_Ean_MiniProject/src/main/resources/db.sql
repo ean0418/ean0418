@@ -8,3 +8,4 @@ create table moviesite_member(
 );
 
 select * from moviesite_member;
+

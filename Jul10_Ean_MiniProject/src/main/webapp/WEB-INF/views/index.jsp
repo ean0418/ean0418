@@ -6,22 +6,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MOVIE</title>
+<title></title>
 <link rel="stylesheet" href="resources/css/index.css">
 <link rel="stylesheet" href="resources/css/login.css">
 <link rel="stylesheet" href="resources/css/signup.css">
+
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
-<script type="text/javascript" src="resources/js/movie_jQuery.js"></script>
+<script type="text/javascript" src="resources/js/movie.js"></script>
 <script type="text/javascript">
 $(function() {
 	goResign();
 	logoutEvent();
 	idCheckEvent();
-	noticeEvent();
 	searchAddressEvent();
-	signupImageUpload();
-	// test();
 });
 </script>
 </head>
@@ -58,10 +56,9 @@ $(function() {
 						<td align="center">
 							<table id="siteMenuArea2">
 								<tr>
-									<td><a href=""><img src="resources/img/1.png"></a></td>
-									<td><a href=""><img src="resources/img/2.png"></a></td>
-									<td><a href=""><img src="resources/img/3.png"></a></td>
-									<td><a href=""><img src="resources/img/4.png"></a></td>
+									<td><a href="movie.go"><img src="resources/img/1.png"></a></td>
+									<td><a href="store.go"><img src="resources/img/2.png"></a></td>
+									<td><a href="box"><img src="resources/img/3.png"></a></td>
 									<td><a href="board.go"><img src="resources/img/5.png"></a></td>
 								</tr>
 							</table>

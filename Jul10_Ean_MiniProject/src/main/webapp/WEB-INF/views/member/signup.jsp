@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 	<form action="member.signup" method="post" enctype="multipart/form-data">
@@ -42,9 +43,9 @@
 			</tr>
 			<tr>
 				<td align="center" colspan="2">
-				<input id="signup_ms_addr1" name="ms_addr1" placeholder="Zip Code" readonly="readonly" 
+				<input id="ms_addr1" name="ms_addr1" placeholder="Zip Code" readonly="readonly" 
 				class="i1" >
-				<input id="signup_ms_addr2" name="ms_addr2" placeholder="Address" readonly="readonly" 
+				<input id="ms_addr2" name="ms_addr2" placeholder="Address" readonly="readonly" 
 				class="i1" >
 				<input name="ms_addr3" placeholder="Detail Address" autocomplete="off"
 				class="i1" >

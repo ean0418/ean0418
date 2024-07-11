@@ -7,6 +7,6 @@
 <title>MOVIE</title>
 </head>
 <body>
-	여기는 HOME!
+
 </body>
 </html>

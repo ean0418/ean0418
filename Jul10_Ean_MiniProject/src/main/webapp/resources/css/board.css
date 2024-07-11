@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "cc";
+	src: url("AWide.ttf");
+}
+#boardTbl {
+	background-color:#967E76;
+	border: 1px solid #fff;
+}
+#boardTbl2 {
+	background-color:gray;
+	border: 1px solid #fff;
+}
+
