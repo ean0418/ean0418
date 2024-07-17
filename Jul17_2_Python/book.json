@@ -1,0 +1,27 @@
+{
+	"documents": [
+		{
+			"authors": [
+				"룰루 밀러"
+			],
+			"contents": "영향을 미치지 않을 수도 있다. 하지만 세상을 바라보는 “진실한 관계들”에 한층 가까이 다가가기 위해 노력하는 사람들에게는 분명 이 책이 놀라운 영감과 어느 한쪽으로도 치우치지 않는 폭넓은 시야를 제공해줄 것이다.  《물고기는 존재하지 않는다》는 세계라는 거대한 구조 속에서 ‘물고기는(그리고 우리는) 어떤 존재인가’에 관해 우리의 관념을 뒤집어엎으며 자유분방한 여정을 그려나간다. 사랑을 잃고 삶이 끝났다고 생각한 그 순간 ‘데이비드 스탄 조던’을 우연히 알게",
+			"datetime": "2021-12-17T00:00:00.000+09:00",
+			"isbn": "1189327155 9791189327156",
+			"price": 17000,
+			"publisher": "곰출판",
+			"sale_price": 15300,
+			"status": "정상판매",
+			"thumbnail": "https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5912160%3Ftimestamp%3D20240403163622",
+			"title": "물고기는 존재하지 않는다",
+			"translators": [
+				"정지인"
+			],
+			"url": "https://search.daum.net/search?w=bookpage\u0026bookId=5912160\u0026q=%EB%AC%BC%EA%B3%A0%EA%B8%B0%EB%8A%94+%EC%A1%B4%EC%9E%AC%ED%95%98%EC%A7%80+%EC%95%8A%EB%8A%94%EB%8B%A4"
+		}
+	],
+	"meta": {
+		"is_end": true,
+		"pageable_count": 1,
+		"total_count": 1
+	}
+}
