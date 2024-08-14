@@ -1,0 +1,265 @@
+새로운 방법의 데이터 처리
+새로운 플랫폼
+
+[가상머신 프로그램]
+	VMWare :
+		정식버전이 유료...
+		사양을 많이 잡아먹음
+		=> 가상머신의 성능 ↑
+		리눅스 자동 설치 => 설치 과정 X
+	VirtualBox :
+		무료
+		사양을 비교적 덜 잡아먹음
+		=> 가상머신의 성능이 비교적 ↓
+		=> Windows가 상대적 성능이 더 ↑
+		리눅스 설치해야 함
+		
+[Linux]
+	Linux 라는 코어가 있고
+	다양한 회사들이 추가기능을 붙여서 Linux 배포판을 출시
+
+	같은 계열끼리는 사용법이 비슷함
+
+	RedHat 계열
+		RedHat 리눅스 - V 큰 기업에서 서버로 활용
+		CentOS 리눅스 
+		Fedora 리눅스
+		...
+	Debian 계열
+		Ubuntu 리눅스 - V 개인이 많이 사용 (우리가 이용할 리눅스)
+		Debian 리눅스
+		...
+	Mac 계열
+		Mac
+		iOS
+	Android 계열
+		Android
+
+
+[Hadoop]
+	PC => 빅데이터 소화하기에는 쫌...
+
+	(서버급 컴퓨터) x (n) 대로 병렬처리를 해주는 .jar
+		=> 대용량의 데이터를 적은 비용으로...
+		=> 처리, 분석, 저장
+		=> 빠르게 할 수 있다!
+
+	서버 : 윈도우(x) Linux(O)
+
+----------------------------------------------------
+1. 구글에 virtualbox 검색	
+2. Downloads 에 들어가서 아래로 좀 내리면
+	VirtualBox older builds -> 6.1 버전 클릭
+	-> 6.1.50 Windows hosts 다운
+3. 다운받은거 실행하기
+(쭉 next 눌러서 install하기)
+4. 공유 드라이브에서 
+ubuntu-14.04.6-desktop-amd64.iso 다운로드
+5. virtualbox에서 새로 만들기(N)
+-> 이름 입력해주고 종류는 Linux 버전은 Ubuntu(64bit)
+-> 2048 MB 메모리크기 입력해주고 
+->지금 새 가상 하드 디스크 만들기로 설정하고 만들기
+-> VDI로 체크하고 다음
+->동적 할당 체크 다음
+->용량 20.00GB로 변경하고 만들기
+6. 만든거 클릭하고 설정 들어가기
+-> 네트워크 (다음에 연결됨)-호스트 전용 어댑터로 선택
+-> 무작위 모드는 가상 머신에 허용 선택하고 확인
+7. 시작
+8. 시동 디스크 선택 창에 뜨는 폴더모양 누르고
+-> 드라이브에서 다운받은거 추가 후 선택-> 시작
+9. install Ubuntu ->continue->install Now->continue
+-> (지역상관없음) continue -> (install 부분 마우스하면 창 움직일 수 있음)continue
+-> 이름 비번 알아서 지정
+-> 입력 다 하고 continue 눌렀을 때 설치가 시작 될 것!!!
+(Ean-1234 내 이름 비번)
+	=> 설치 다 되면 -[Restart Now] 누르지말고 대기
+	
+장치 탭 - 광학드라이브 - 가상드라이브에서 디스크 꺼내기
+	- 강제 마운트 해제 -> 파일 탭 - 닫기 - 시스템 전원끄기
+
+다시 시작
+-----------------------------------------------------------
+비번 누르고 엔터
+Ctrl + Alt + t : Terminal
+	=> ifconfig 입력 (인터넷 연결 확인)
+->닫기
+-> 설정에서 네트워크 (다음에 연결됨) 을 어댑터에 브리지로 변경
+->시작
+->Ctrl + Alt + t : Terminal
+	=> ifconfig 입력 
+eth0 쪽에 inet addr가 컴퓨터의 주소
+
+Terminal 정리 : clear 입력
+---------------------------------------------------------
+명령어 입력 'sudo'(superuser do) - 관리자의 권한으로...
+프로그램을 설치
+
+Java : Maven
+Python : pip
+
+Linux : 
+	Redhat 계열 : yum
+	Debian 계열 : apt-get
+
+sudo apt-get install [프로그램명] 	[설치]
+sudo apt-get remove [프로그램명]	[삭제] -설정파일은 남아있음
+sudo apt-get purge [프로그램명]     	[삭제] - 완전히 다 삭제
+------------------------------------------------------------
+1) 원격제어가 가능하게 하는
+	(컴퓨터를 안전하게 제어하기 위한 프로토콜)
+
+	telnet << 보안이 더 뛰어난 ssh(secure shell)사용하려고!
+	
+	sudo apt-get update (Terminal에 입력)
+	-> sudo apt-get install openssh-server (Terminal에 입력)
+
+2) Windows PC에서 원격으로 제어
+	putty : ssh client program
+구글에 putty 검색-> 상단에 Download PuTTY - a free SSH and telnet client for Windows
+-> Download putty-> putty.exe (the SSH and Telnet client itself) 64비트 x86 putty.exe 다운
+-> 실행 ->session에 host name에 Linux 아이피 주소 넣기
+-> accept -> 계정과 비번 입력
+
+간단한 사용법 :
+	clear - 화면 초기화
+	pwd(parent working directory) : 현재 위치 확인
+	ls : 폴더 확인
+	ls -l : 폴더를 리스트 형태로 확인
+	ls -a : 숨김폴더까지 확인
+	ls -al : -a + -l
+
+	화살표 위/아래 : 사용했던 명령어
+	history : 내가 그동안 사용한 명령어 확인
+		=> !번호로 그 명령어 다시 실행
+
+	(change directory) : 경로 이동
+	cd 폴더명: 해당 폴더로 이동
+	cd ~ : 최상위 경로로 이동
+	cd .. : 한단계 상위경로로 이동
+	mkdir 폴더명 : 폴더만들기
+----------------------------------------------------------
+vi editor >> Windows memo : 
+키보드의 화살표 키를 못쓰게 막아둠.. 
+vim-tiny 기본적으로 설치가 되어있음 >> 삭제
+	sudo apt-get remove vim-tiny
+vim(정식버전) 설치
+	sudo apt-get install vim
+
+	vi [파일명]
+	(vi : 해당하는 파일이 없으면 새로 생성,
+	있으면 해당하는 파일 열어줌)
+	a : 글 쓰기 가능 (insert 모드)
+	/검색어 : 찾기
+	dd : 줄 삭제
+	yy : 복사
+	p : 붙이기
+	다 쓴후
+		esc + 	:q!  => 저장하지 않고 종료
+		esc + 	:wq! => 저장 후 종료
+	
+	파일 복사
+	cp	파일명	어디에(폴더명)
+	
+	파일/폴더 삭제
+	rm 	-rf	파일명/폴더명
+	디렉토리를 삭제할 때는 r옵션
+	f 옵션을 주면 삭제 여부를 묻지 않고 바로 삭제
+	디렉토리를 삭제할 때는 하위 디렉토리까지 모두 삭제됨!
+	
+	파일 이동
+	mv	파일명	어디에(폴더명)
+-----------------------------------------------------------------------
+최상위 경로에서
+메모장 하나 열어서 내용 넣고,
+저장 후에 나와서
+새롭게 만든 폴더에 해당 파일을 복사해서 넣기
+------------------------------------------------------------
+아카이빙 : 파일 여러개를 하나로 묶는 것
+	tar
+압축 : 파일 하나의 사이즈를 줄이는 것
+	gz(gzip)
+	bz2(bz2)
+XXX.tar.gz
+	c : 압축 하기
+	x : 압축 풀기
+	v : 과정 보여주기
+	z : gz로 압축
+	j : bz2로 압축
+	f 파일명 : 파일 지정
+	
+doTest 폴더를 doTest.tar.gz로 아카이빙 & 압축
+	tar cvz doTest.gz doTest
+
+압축 해제
+	tar xvzf doTest.tar.gz
+
+-------------------------------------------------
+zip으로 압축
+zip -r 파일명 압축할 파일명
+	zip -r doTest.zip doTest
+
+zip 압축해제
+unzip 파일명
+	unzip doTest.zip
+-------------------------------------------------
+FTP 서버
+	: File Transfer Protocol
+	인터넷 망으로 연결이 되어있는 멀~~리 떨어진 서버로
+	파일을 올리거나, 가져오기 위해서 필요한 프로토콜
+
+vsftpd 설치
+	sudo apt-get install vsftpd
+
+설정파일 수정
+	(최상위 경로 - etc 폴더 안에 vsftpd.conf)
+	sudo vi /etc/vsftpd.conf
+
+	/찾을단어 => enter
+	/write
+
+	#write_enable=Yes => 주석 해제 후 저장,종료
+
+FTP서버 재시작
+	sudo service vsftpd restart
+----------------------------------------------------------
+Linux에 openJDK 설치
+
+Linux에는 Python은 내장되어있음
+But!! Java는 내장 X => 설치해야....
+apt-get 중앙저장소에도 없어서 ㅠㅜㅠㅜㅠㅜ
+
+사설저장소 등록
+	저장소 주소 : ppa:openjdk-r/ppa
+	
+	sudo add-apt-repository 주소
+	sudo add-apt-repository ppa:openjdk-r/ppa
+
+로컬 apt-get 업데이트
+	sudo apt-get update
+
+openJDK 설치
+	프로그램명 : openjdk-8-jdk
+	sudo apt-get install openjdk-8-jdk
+
+설치 확인하기
+	java -version
+	(openjdk version "1.8.0_292" 나오면 성공)
+--------------------------------------------------------
+구글에서 알드라이브 다운-설치
+---------------------------------------------------
+python
+	python3 파일명.py
+
+java 
+	java -jar 파일명.jar
+----------------------------------------------
+가상머신 총 3개를 설치
+	=> Ubuntu까지만 설치
+	=> 이후 설치x
+	=> 계정, 비밀번호는 3대 다 동일하게
+
+
+
+
+
