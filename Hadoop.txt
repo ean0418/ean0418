@@ -1,0 +1,79 @@
+가상 머신 실행 + putty 실행 하기
+
+1. 끄기
+		NN만]
+		hadoop/hadoop-3.3.3 폴더로 가서
+		sbin/stop-all.sh
+
+2. 찌꺼기 폴더 삭제
+		전부 다]
+		rm -rf ~/hadoopTmpData
+
+3. 하둡 폴더로 이동
+		NN만]
+		cd ~/hadoop/hadoop-3.3.3
+
+4. 하둡시스템 포맷
+		NN만]	
+		bin/hadoop namenode -format
+		bin/hadoop datanode -format
+
+5. 시작
+		NN만]
+		sbin/start-all.sh
+
+6. 확인	
+		jps >> 확인
+
+https://www.gutenberg.org/browse/scores/top
+	원하는 소설
+	utf 저장
+
+그 텍스트 파일을 NN의 알드라이브로 옮기기
+
+NN] ~/hadoop/hadoop-3.3.3 로 
+
+NN 의 HDD 확인 : ls
+
+HDFS 확인
+	bin/hadoop fs -ls /
+
+HDFS로 파일 업로드
+	bin/hadoop fs -put 파일명 HDFS경로
+	bin/hadoop fs -put esay.txt /
+
+
+
+.jar 파일 알드라이브에 넣기
+
+실행
+
+wc.jar
+	bin/hadoop jar 파일명.jar
+	bin/hadoop jar wc.jar
+wc2.jar
+	bin/hadoop jar wc2.jar /esay.txt /sResult2
+
+HDFS 확인
+	bin/hadoop fs -ls /
+
+실행하면 결과폴더(파일)/part-r-00000로 결과 파일을 가져올 수 있음
+
+결과 파일 가져오기
+	bin/hadoop fs -get HDFS에 있는 무언가를 NN의 어디로
+	bin/hadoop fs -get /sResult/part-r-00000 sResult.txt
+
+ls로 Linux로 가져와졋는지 확인
+
+그 결과 파일을 알드라이브로 WinPC쪽에 가져와서 확인
+
+------
+결과가 안나오거나 잘못됐다면..
+	jps- 잘 나오는지 확인
+		잘 안나온다면.. 세팅부분 다시
+
+실행하다가 => java코드 문법 오류 => java 코드에서 패키지
+
+실행할 때 결과폴더가 없어야 함
+	bin/hadoop fs -rm -r HDFS경로
+	bin/hadoop fs -rm -r /sResult
